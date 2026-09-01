@@ -1,0 +1,30 @@
+.footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  background: var(--paper-sunk);
+  text-align: center;
+  padding: 48px var(--gutter) 56px;
+}
+
+.names {
+  font-size: 1.9rem;
+}
+
+.footer :global(.rule) {
+  margin: 12px auto;
+}
+
+.families {
+  font-size: 0.6rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.thanks {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}

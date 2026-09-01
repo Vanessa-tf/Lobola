@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Raw/source reference material (videos, uncropped photos) -- not used by
+# the built site. Kept locally for reference, not pushed to GitHub.
+assets-src/

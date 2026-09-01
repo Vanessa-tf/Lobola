@@ -1,0 +1,202 @@
+.rsvp {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--section-y) var(--gutter);
+  background: var(--paper-sunk);
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.6rem;
+}
+
+.confirmation {
+  margin-top: 14px;
+  color: var(--ink-soft);
+}
+
+.form {
+  margin-top: 30px;
+  display: grid;
+  gap: 17px;
+  text-align: left;
+}
+
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.field label,
+.split label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 7px;
+}
+
+.field input,
+.field textarea,
+.split input,
+.split select {
+  width: 100%;
+  padding: 12px 13px;
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  appearance: none;
+}
+
+.field input:focus,
+.field textarea:focus,
+.split input:focus,
+.split select:focus {
+  outline: 2px solid var(--terra);
+  outline-offset: 1px;
+}
+
+.field textarea {
+  min-height: 104px;
+  resize: vertical;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.choice {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.choice legend {
+  display: block;
+  width: 100%;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 7px;
+}
+
+.choice label {
+  position: relative;
+  margin: 0;
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+}
+
+.choice span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  text-align: center;
+  padding: 8px 6px;
+  border: 1px solid var(--line);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: var(--paper);
+}
+
+.choice input:checked + span {
+  background: var(--terra-deep);
+  color: var(--paper);
+  border-color: var(--terra-deep);
+}
+
+.choice input:focus-visible + span {
+  outline: 2px solid var(--terra);
+  outline-offset: 2px;
+}
+
+.form button[type='submit'] {
+  padding: 16px;
+  background: var(--terra-deep);
+  color: var(--paper);
+  border: 0;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form button[type='submit']:hover {
+  background: var(--terra);
+}
+
+.error {
+  margin-top: 12px;
+  color: var(--terra-deep);
+  font-size: 0.82rem;
+}
+
+.alternative {
+  text-align: center;
+  margin-top: 26px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 10px auto 0;
+  padding: 13px 26px;
+  border: 1px solid var(--line);
+  color: var(--terra-deep);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+  background: var(--paper);
+  border-color: var(--terra-deep);
+}
+
+.contactIcon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 340px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .choice {
+    grid-template-columns: 1fr;
+  }
+}

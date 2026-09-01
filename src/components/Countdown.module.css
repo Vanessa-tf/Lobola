@@ -1,0 +1,40 @@
+.countdown {
+  padding: var(--section-y) var(--gutter);
+  background: var(--terra-deep);
+  color: var(--on-terra);
+  text-align: center;
+}
+
+.countdown :global(.eyebrow) {
+  color: rgba(247, 237, 228, 0.72);
+}
+
+.clock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 8px;
+  margin-top: 26px;
+}
+
+.value {
+  grid-row: 1;
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 9vw, 2.7rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.term {
+  grid-row: 2;
+  padding-top: 4px;
+  font-size: 0.56rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(247, 237, 228, 0.68);
+}
+
+.married {
+  margin-top: 26px;
+  font-family: var(--script);
+  font-size: 2.2rem;
+}

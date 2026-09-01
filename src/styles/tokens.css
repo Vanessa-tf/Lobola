@@ -1,0 +1,21 @@
+:root {
+  /* colour */
+  --paper: #f6f1e7;
+  --paper-sunk: #efe7da;
+  --ink: #332f3b;
+  --ink-soft: #5d5763;
+  --terra: #b87355;
+  --terra-deep: #9c5b3f;
+  --line: rgba(51, 47, 59, 0.22);
+  --on-terra: #f7ede4;
+
+  /* type */
+  --script: 'Great Vibes', cursive;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Montserrat', system-ui, sans-serif;
+
+  /* rhythm */
+  --measure: 640px;
+  --gutter: 26px;
+  --section-y: 76px;
+}

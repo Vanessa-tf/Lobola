@@ -1,0 +1,45 @@
+.calendar {
+  margin: clamp(6px, 2svh, 18px) auto 0;
+  max-width: 430px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.month {
+  caption-side: top;
+  font-size: 0.74rem;
+  letter-spacing: 0.4em;
+  text-align: center;
+  margin-bottom: clamp(6px, 2svh, 14px);
+  font-weight: 400;
+}
+
+.calendar th {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  padding-bottom: 4px;
+}
+
+.calendar td {
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.02rem;
+  padding: clamp(4px, 1.4svh, 8px) 0;
+}
+
+.calendar td[data-wedding-day] {
+  color: var(--terra-deep);
+  font-weight: 500;
+}
+
+.calendar td[data-wedding-day]::before {
+  content: '';
+  position: absolute;
+  inset: -8px -3px -12px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-58 -46 116 118'><path d='M0,-14 C-16,-40 -52,-30 -52,-2 C-52,26 -20,44 0,64 C20,44 52,26 52,-2 C52,-30 16,-40 0,-14 Z' fill='none' stroke='%23B87355' stroke-width='3' stroke-dasharray='5 9' stroke-linecap='round'/></svg>")
+    center / contain no-repeat;
+}
