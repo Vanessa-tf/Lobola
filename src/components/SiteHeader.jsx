@@ -16,7 +16,6 @@ export default function SiteHeader() {
 
   return (
     <header className={styles.bar} data-visible={visible}>
-      <img className={styles.logo} src="/images/logo-mark.png" alt="" aria-hidden="true" />
       <p className="display">{couple.shortNames}</p>
     </header>
   )
