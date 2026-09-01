@@ -2,8 +2,11 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  padding: 11px 0;
-  text-align: center;
+  padding: 9px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
   background: rgba(246, 241, 231, 0.93);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
@@ -13,6 +16,11 @@
 
 .bar[data-visible='true'] {
   opacity: 1;
+}
+
+.logo {
+  height: 26px;
+  width: auto;
 }
 
 .bar p {
