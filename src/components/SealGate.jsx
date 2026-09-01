@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { couple } from '../data/wedding.js'
 import styles from './SealGate.module.css'
 
 /** Full-screen wax seal. Tapping it reveals the invitation. */
@@ -23,7 +22,7 @@ export default function SealGate({ onOpening, onOpen }) {
         <div className={styles.envelopeWrap}>
           <img className={styles.envelopeImg} src="/images/envelope-trimmed.jpg" alt="" aria-hidden="true" />
           <img className={styles.flapImg} src="/images/envelope-trimmed.jpg" alt="" aria-hidden="true" />
-          <p className={styles.names} aria-hidden="true">{couple.shortNames}</p>
+          <p className={styles.names} aria-hidden="true">You&rsquo;ve Got Mail</p>
           <button ref={buttonRef} type="button" className={styles.wax} onClick={open}>
             <img className={styles.sealImg} src="/images/wax-seal-lr-brown.png" alt="" aria-hidden="true" />
             <span className={styles.label}>Open the invitation</span>

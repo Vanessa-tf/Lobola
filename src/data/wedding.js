@@ -50,3 +50,9 @@ export const blooms = {
   topLeft: '/images/rose-white-cluster.png',
   bottomRight: '/images/rose-crimson-cluster.png'
 }
+
+// The track that plays once the seal is tapped. Drop the file into
+// public/audio and point this at it. Leave empty to play nothing.
+export const music = {
+  src: '/audio/i-do.mp3'
+}
