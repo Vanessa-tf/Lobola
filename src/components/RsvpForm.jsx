@@ -8,6 +8,7 @@ const FORM_NAME = 'rsvp'
 export default function RsvpForm() {
   const [ref, shown] = useReveal()
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [accepted, setAccepted] = useState(false)
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -69,32 +70,42 @@ export default function RsvpForm() {
           <legend>Will you attend?</legend>
           {rsvp.attendance.map((option) => (
             <label key={option.value}>
-              <input type="radio" name="attending" value={option.value} required />
+              <input
+                type="radio"
+                name="attending"
+                value={option.value}
+                required
+                onChange={() => setAccepted(!option.declines)}
+              />
               <span>{option.label}</span>
             </label>
           ))}
         </fieldset>
 
-        <p className={styles.split}>
-          <label htmlFor="guests">Number of guests</label>
-          <input id="guests" name="guests" type="number" min="1" max="10" defaultValue="1" />
-          <label htmlFor="diet">Dietary needs</label>
-          <select id="diet" name="diet">
-            {rsvp.dietOptions.map((option) => (
-              <option key={option}>{option}</option>
-            ))}
-          </select>
-        </p>
+        {accepted && (
+          <>
+            <p className={styles.split}>
+              <label htmlFor="guests">Number of guests</label>
+              <input id="guests" name="guests" type="number" min="1" max="10" defaultValue="1" />
+              <label htmlFor="diet">Dietary needs</label>
+              <select id="diet" name="diet">
+                {rsvp.dietOptions.map((option) => (
+                  <option key={option}>{option}</option>
+                ))}
+              </select>
+            </p>
 
-        <p className={styles.field}>
-          <label htmlFor="message">Dietary details or other questions</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            placeholder="Especially if you chose &ldquo;Other&rdquo; above"
-          />
-        </p>
+            <p className={styles.field}>
+              <label htmlFor="message">Dietary details or other questions</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Especially if you chose &ldquo;Other&rdquo; above"
+              />
+            </p>
+          </>
+        )}
 
         <button type="submit" disabled={status === 'sending'}>
           {status === 'sending' ? 'Sending' : 'Send confirmation'}

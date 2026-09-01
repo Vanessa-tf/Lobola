@@ -41,7 +41,7 @@ export const rsvp = {
   dietOptions: ['None', 'Vegetarian', 'Halaal', 'No pork', 'Other (noted below)'],
   attendance: [
     { value: 'Joyfully accepts', label: 'Joyfully accepts' },
-    { value: 'Regretfully declines', label: 'Regretfully declines' }
+    { value: 'Regretfully declines', label: 'Regretfully declines', declines: true }
   ]
 }
 
