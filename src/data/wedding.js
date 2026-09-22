@@ -6,7 +6,7 @@ export const couple = {
   initials: 'L&R',
   shortNames: 'Lydia & Rueben',
   families: 'The Chaibva and Fambarega families',
-  occasion: 'roora'
+  occasion: 'roora luncheon'
 }
 
 // ISO 8601 with the offset. +02:00 is Zimbabwe / South Africa.
