@@ -19,6 +19,7 @@ export default function SealGate({ onOpening, onOpen }) {
   return (
     <aside className={styles.gate} data-leaving={leaving} aria-label="Invitation cover">
       <div className={styles.card}>
+        <img className={styles.frame} src="/images/frame-gold-roses.png" alt="" aria-hidden="true" />
         <div className={styles.envelopeWrap}>
           <img className={styles.envelopeImg} src="/images/envelope-trimmed.jpg" alt="" aria-hidden="true" />
           <img className={styles.flapImg} src="/images/envelope-trimmed.jpg" alt="" aria-hidden="true" />
