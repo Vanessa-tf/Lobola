@@ -38,7 +38,7 @@ export const rsvp = {
   deadline: '31 October 2026',
   contactName: 'Vanessa',
   contactPhone: '+27 73 038 9502',
-  dietOptions: ['None', 'Vegetarian', 'Halaal', 'No pork', 'Other (noted below)'],
+  dietOptions: ['None', 'Vegetarian', 'Other (noted below)'],
   attendance: [
     { value: 'Joyfully accepts', label: 'Joyfully accepts' },
     { value: 'Regretfully declines', label: 'Regretfully declines', declines: true }
